@@ -1,4 +1,4 @@
-using PluginCore.AspNetCore.Extensions;
+ï»¿using PluginCore.AspNetCore.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// 1. Ìí¼Ó PluginCore
+// 1. æ·»åŠ  PluginCore
 builder.Services.AddPluginCore();
 
 var app = builder.Build();
@@ -23,7 +23,7 @@ if (app.Environment.IsDevelopment())
 
 //app.UseHttpsRedirection();
 
-// 2. Ê¹ÓÃ PluginCore
+// 2. ä½¿ç”¨ PluginCore
 app.UsePluginCore();
 
 app.MapGet("/health", () =>

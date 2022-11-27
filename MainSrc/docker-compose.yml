@@ -1,4 +1,4 @@
-version: '3.4'
+ï»¿version: '3.4'
 
 services:
  zkwebsite:
@@ -11,10 +11,10 @@ services:
     environment:
       - TZ=Asia/Shanghai
       - ASPNETCORE_ENVIRONMENT=Production
-      # ×¢Òâ£ºhttp://*:80 ²»ÒªÓÃ Ë«ÒıºÅ "" ÒıÆğÀ´
+      # æ³¨æ„ï¼šhttp://*:80 ä¸è¦ç”¨ åŒå¼•å· "" å¼•èµ·æ¥
       - ASPNETCORE_URLS=http://*:80
     volumes:
-      # ×¢Òâ: Linux ÏÂ Çø·Ö´óĞ¡Ğ´
+      # æ³¨æ„: Linux ä¸‹ åŒºåˆ†å¤§å°å†™
       - ./Plugins:/app/Plugins
       - ./App_Data:/app/App_Data
       - ./PluginCoreAdmin:/app/PluginCoreAdmin
