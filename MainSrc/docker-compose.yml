@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+ zkwebsite:
+    image: zkwebsite:v3.4
+    build: .
+    container_name: zkwebsite
+    restart: always
+    ports:
+      - "5007:80"
+    environment:
+      - TZ=Asia/Shanghai
+      - ASPNETCORE_ENVIRONMENT=Production
+      # 注意：http://*:80 不要用 双引号 "" 引起来
+      - ASPNETCORE_URLS=http://*:80
+    volumes:
+      # 注意: Linux 下 区分大小写
+      - ./Plugins:/app/Plugins
+      - ./App_Data:/app/App_Data
+      - ./PluginCoreAdmin:/app/PluginCoreAdmin
+      - ./Plugins_wwwroot:/app/Plugins_wwwroot
